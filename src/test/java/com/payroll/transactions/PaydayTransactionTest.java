@@ -16,7 +16,6 @@ import java.time.LocalDate;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNull;
 
-@RunWith(JUnit4.class)
 public class PaydayTransactionTest {
 
     private PayrollDatabase payrollDatabase;

@@ -15,7 +15,6 @@ import org.junit.runners.JUnit4;
 
 import static junit.framework.TestCase.assertEquals;
 
-@RunWith(JUnit4.class)
 public class AddSalariedEmployeeTransactionTest {
 
     private PayrollDatabase payrollDatabase;
