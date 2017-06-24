@@ -3,6 +3,9 @@ pipeline {
     tools { 
         maven 'M3'
     }
+    environment {
+        committer = ""
+    }
     stages {
         stage('Preparation') { 
             steps {
@@ -23,6 +26,7 @@ pipeline {
     post {
         success {
             archive 'target/*.jar'
+            emailext body: 'Congratulations', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'CulpritsRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Build success'
         }
     }
 }
